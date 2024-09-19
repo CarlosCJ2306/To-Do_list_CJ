@@ -1,0 +1,158 @@
+/** 
+ * Estilos generales del cuerpo de la página
+ * 
+ * Define el estilo básico del cuerpo de la página. Establece la tipografía,
+ * los colores, y los efectos de transición para el fondo y el color del texto.
+ */
+ body {
+    font-family: 'Arial', sans-serif; /* Fuente predeterminada para el texto */
+    color: #f9f9f9; /* Texto claro por defecto en tema oscuro */
+    background-color: #333; /* Fondo oscuro por defecto */
+    transition: background-color 0.3s, color 0.3s; /* Transiciones suaves para cambios de color */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+    width: 100%; /* Asegura que el cuerpo ocupe todo el ancho */
+}
+
+/** 
+ * Configuración de diseño del cuerpo
+ * 
+ * Utiliza Flexbox para alinear y distribuir los elementos dentro del cuerpo
+ * de la página. Asegura que el cuerpo tenga al menos el alto de la ventana.
+ */
+body {
+    display: flex; /* Utiliza Flexbox para alinear elementos */
+    flex-direction: column; /* Dispone los elementos en una columna vertical */
+    min-height: 100vh; /* Asegura que el cuerpo al menos tenga el alto de la ventana */
+}
+
+/** 
+ * Estilos del encabezado
+ * 
+ * Define el fondo, color, padding y alineación del encabezado, además de
+ * aplicar una sombra sutil.
+ */
+header {
+    background-color: #444; /* Fondo del encabezado oscuro */
+    color: white; /* Color del texto en el encabezado */
+    padding: 20px; /* Espaciado interno del encabezado */
+    text-align: center; /* Alineación del texto al centro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil en el encabezado */
+}
+
+/** 
+ * Estilos para el logo dentro del encabezado
+ * 
+ * Ajusta el tamaño máximo del logo y el margen inferior.
+ */
+header .logo img {
+    max-width: 120px; /* Tamaño máximo del logo */
+    margin-bottom: 10px; /* Margen inferior del logo */
+}
+
+/** 
+ * Estilos del título principal
+ * 
+ * Define el tamaño de fuente y elimina el margen del título principal.
+ */
+h1 {
+    margin: 0; /* Elimina el margen del título principal */
+    font-size: 2.5em; /* Tamaño de fuente del título principal */
+}
+
+/** 
+ * Estilos del subtítulo
+ * 
+ * Define el tamaño de fuente y el margen del subtítulo.
+ */
+p.subtitulo {
+    font-size: 1.2em; /* Tamaño de fuente del subtítulo */
+    margin: 10px 0; /* Margen superior e inferior del subtítulo */
+}
+
+/** 
+ * Estilos para botones y enlaces con clase 'button'
+ * 
+ * Define el padding, cursor, borde, bordes redondeados, tamaño de fuente y 
+ * transiciones para botones y enlaces con la clase 'button'.
+ */
+button, a.button {
+    padding: 10px 20px; /* Espaciado interno de botones y enlaces */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    border: none; /* Elimina el borde de los botones */
+    border-radius: 5px; /* Bordes redondeados en los botones */
+    font-size: 1em; /* Tamaño de fuente del botón */
+    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves para cambios de color y transformación */
+    text-decoration: none; /* Elimina el subrayado en enlaces */
+    display: inline-block; /* Asegura que el botón se comporte como un bloque en línea */
+}
+
+/** 
+ * Estilos para botones y enlaces con clase 'button' (tema oscuro)
+ * 
+ * Define el color de fondo y el color del texto para el estado normal y el
+ * estado hover de botones y enlaces en el tema oscuro.
+ */
+button.button, a.button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+}
+
+button.button:hover, a.button:hover {
+    background-color: #0056b3; /* Color de fondo en estado hover */
+    transform: scale(1.05); /* Efecto de escala al pasar sobre el botón */
+}
+
+/** 
+ * Estilos del contenido principal
+ * 
+ * Define el padding y la alineación del texto en el contenido principal. 
+ * Permite que el contenido principal ocupe el espacio disponible.
+ */
+main {
+    flex: 1; /* Permite que el main ocupe el espacio disponible */
+    padding: 20px; /* Espaciado interno del contenido principal */
+    text-align: center; /* Alineación del texto al centro */
+}
+
+/** 
+ * Estilos del pie de página
+ * 
+ * Define el fondo, color, alineación y padding del pie de página.
+ */
+footer {
+    background-color: #444; /* Fondo del pie de página oscuro */
+    color: white; /* Color del texto en el pie de página */
+    text-align: center; /* Alineación del texto al centro */
+    padding: 10px; /* Espaciado interno del pie de página */
+    bottom: 0; /* Asegura que el pie de página se alinee al fondo */
+}
+
+/** 
+ * Estilos para el tema claro
+ * 
+ * Define los estilos específicos para el tema claro, sobreescribiendo los
+ * estilos predeterminados en el cuerpo, encabezado, pie de página, y botones.
+ */
+body.light-theme {
+    color: #333; /* Color del texto en el tema claro */
+    background-color: #f9f9f9; /* Fondo del cuerpo en el tema claro */
+}
+
+body.light-theme header {
+    background-color: #007bff; /* Fondo del encabezado en el tema claro */
+}
+
+body.light-theme footer {
+    background-color: #007bff; /* Fondo del pie de página en el tema claro */
+}
+
+body.light-theme button.button,
+body.light-theme a.button {
+    background-color: #072d57; /* Color de fondo del botón en el tema claro */
+}
+
+body.light-theme button.button:hover,
+body.light-theme a.button:hover {
+    background-color: #0056b3; /* Color de fondo en estado hover en el tema claro */
+}

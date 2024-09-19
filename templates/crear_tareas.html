@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nueva Tarea</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/crear_tareas.css">
+</head>
+<body class="dark-theme">
+    <header>
+        <div class="logo">
+            <img src="/static/img/LogodeCJ.png" alt="Logo" width="100">
+        </div>
+        <h1>Crear Nueva Tarea</h1>
+        <p class="subtitulo">Desarrollado por Carlos CJ</p>
+        <button id="cambiar_tema" class="button">Cambiar Tema</button>
+    </header>
+    <main>
+        <section class="container">
+            <div class="form-container">
+                <h2>Agregar Tarea</h2>
+                <form id="formulario-tarea">
+                    <label for="titulo">Título:</label>
+                    <input type="text" id="titulo" name="titulo" required>
+                
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" rows="4"></textarea>
+                
+                    <label for="estado">Estado:</label>
+                    <select id="estado" name="estado">
+                        <option value="pendiente">Pendiente</option>
+                        <option value="hecha">Hecha</option>
+                    </select>
+                
+                    <button type="submit" class="button">Agregar Tarea</button>
+                </form>
+                
+                <p><a href="/" class="button">Volver a la Página Principal</a></p>
+            </div>
+            <div class="list-container">
+                <h2>Lista de Tareas</h2>
+                <ul id="lista-tareas">
+                    <!-- Las tareas se agregarán aquí dinámicamente -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Carlos CJ. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/static/js/cambiar_tema.js"></script>
+    <script src="/static/js/crear_tareas.js"></script>
+</body>
+</html>

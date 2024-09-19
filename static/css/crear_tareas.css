@@ -1,0 +1,257 @@
+/** 
+ * crear_tareas.css
+ * 
+ * Este archivo contiene los estilos generales para una aplicación web moderna,
+ * con soporte para modo oscuro y claro. Incluye estilos para el cuerpo, encabezado,
+ * contenido principal, formularios, botones, listas y pie de página.
+ */
+
+/* Estilos generales para la página */
+html, body {
+    height: 100%; /* Asegura que el cuerpo ocupe toda la altura de la pantalla */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina padding por defecto */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Tipografía general para todo el contenido */
+    color: #f9f9f9; /* Color del texto en el modo oscuro */
+    background-color: #333; /* Color de fondo en el modo oscuro */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para los cambios de color */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #444; /* Color de fondo del encabezado */
+    color: white; /* Color del texto en el encabezado */
+    padding: 20px; /* Espaciado interno del encabezado */
+    text-align: center; /* Alineación centrada del texto en el encabezado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil para el encabezado */
+    width: 100%; /* Ancho completo del encabezado */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilos para el título principal */
+h1 {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 2.5em; /* Tamaño de fuente grande para el título */
+}
+
+/* Estilos para subtítulos */
+p.subtitulo {
+    font-size: 1.2em; /* Tamaño de fuente para subtítulos */
+    margin: 10px 0; /* Espaciado vertical de los subtítulos */
+}
+
+/* Estilos para botones y enlaces con clase 'button' */
+button, a.button {
+    padding: 10px 20px; /* Espaciado interno para botones */
+    cursor: pointer; /* Cursor tipo puntero para botones */
+    border: none; /* Elimina bordes por defecto */
+    border-radius: 5px; /* Bordes redondeados en botones */
+    font-size: 1em; /* Tamaño de fuente para botones */
+    transition: background-color 0.3s, transform 0.2s; /* Transición suave para cambios de color y escala */
+    text-decoration: none; /* Elimina el subrayado en enlaces */
+    display: inline-block; /* Muestra los botones como elementos en línea */
+}
+
+button.button, a.button {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto en el botón */
+}
+
+button.button:hover, a.button:hover {
+    background-color: #0056b3; /* Color de fondo del botón en hover */
+    transform: scale(1.05); /* Efecto de aumento en hover */
+}
+
+/* Estilos para el contenido principal */
+main {
+    padding: 20px; /* Espaciado interno del contenido principal */
+    text-align: center; /* Alineación centrada del texto */
+    flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+    box-sizing: border-box; /* Incluye padding en el ancho total */
+}
+
+/* Estilos para la sección principal con contenedores */
+.container {
+    display: flex; /* Utiliza flexbox para la disposición de los contenedores */
+    justify-content: space-between; /* Distribuye el espacio entre los contenedores */
+    flex-wrap: wrap; /* Permite que los contenedores se envuelvan en una nueva línea si es necesario */
+    margin-top: 20px; /* Margen superior para separar del contenido superior */
+    gap: 20px; /* Espacio entre los contenedores */
+    width: 100%; /* Ancho completo del contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilos para los contenedores de formulario y lista */
+.form-container{
+        flex: 1 1 calc(30% - 20px) ;    /* Flex para que cada contenedor ocupe el 30% del espacio disponible menos el gap */
+        background-color: #444; /* Fondo oscuro para los contenedores */
+        color: #f9f9f9; /* Color del texto dentro de los contenedores */
+        padding: 20px; /* Espaciado interno de los contenedores */
+        border-radius: 8px; /* Bordes redondeados en los contenedores */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para los contenedores */
+        box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.list-container {
+    flex: 1 1 calc(70% - 20px) ;     /* Flex para que cada contenedor ocupe el 70% del espacio disponible menos el gap */
+    background-color: #444; /* Fondo oscuro para los contenedores */
+    color: #f9f9f9; /* Color del texto dentro de los contenedores */
+    padding: 20px; /* Espaciado interno de los contenedores */
+    border-radius: 8px; /* Bordes redondeados en los contenedores */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para los contenedores */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+
+/* Estilos para los títulos dentro de los contenedores */
+.form-container h2, .list-container h2 {
+    margin-bottom: 15px; /* Margen inferior para los títulos */
+    font-size: 1.5rem; /* Tamaño de fuente para los títulos */
+}
+
+/* Estilos para las etiquetas dentro del formulario */
+.form-container label {
+    display: block; /* Muestra las etiquetas como bloques */
+    margin-bottom: 8px; /* Espaciado inferior de las etiquetas */
+    font-weight: bold; /* Fuente en negrita para las etiquetas */
+}
+
+/* Estilos para campos de entrada y áreas de texto en el formulario */
+.form-container input, .form-container textarea {
+    width: 95%; /* Ancho completo del campo de entrada */
+    padding: 10px; /* Espaciado interno del campo de entrada */
+    margin-bottom: 10px; /* Margen inferior entre campos de entrada */
+    border: 1px solid #666; /* Borde oscuro para los campos de entrada */
+    border-radius: 4px; /* Bordes redondeados en los campos de entrada */
+    background-color: #555; /* Fondo oscuro para los campos de entrada */
+    color: #f9f9f9; /* Color del texto en los campos de entrada */
+}
+
+/* Estilos para el botón dentro del formulario */
+.form-container button {
+    background-color: #007bff; /* Color de fondo del botón del formulario */
+    color: #fff; /* Color del texto en el botón */
+    border: none; /* Elimina el borde del botón */
+    padding: 8px 16px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cursor tipo puntero para el botón */
+    border-radius: 4px; /* Bordes redondeados en el botón */
+}
+
+.form-container button:hover {
+    background-color: #0056b3; /* Color de fondo del botón en hover */
+}
+
+/* Estilos para listas desordenadas */
+ul {
+    list-style: none; /* Elimina los puntos de lista por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    width: 100%; /* Ancho completo del contenedor de la lista */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Estilos para los elementos de lista */
+li {
+    padding: 5px; /* Espaciado interno de los elementos de lista */
+    border-bottom: 1px solid #ddd; /* Borde inferior de los elementos de lista */
+    border-radius: 6px; /* Bordes redondeados en los elementos de lista */
+    margin-bottom: 5px; /* Margen inferior entre elementos de lista */
+    display: flex; /* Utiliza flexbox para la disposición del contenido */
+    justify-content: space-between; /* Distribuye el espacio entre el contenido de los elementos */
+    align-items: center; /* Alinea el contenido verticalmente */
+    background-color: #ffffff; /* Fondo blanco para los elementos de lista */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para cambios de color */
+}
+
+li:last-child {
+    border-bottom: none; /* Elimina el borde inferior del último elemento de la lista */
+}
+
+/* Estilos específicos para el estado de los elementos de lista */
+li[data-estado="pendiente"] {
+    background-color: #f8d7da; /* Fondo rojo claro para tareas pendientes */
+    color: #721c24; /* Color del texto en rojo oscuro */
+}
+
+li[data-estado="hecha"] {
+    background-color: #d4edda; /* Fondo verde claro para tareas completas */
+    color: #155724; /* Color del texto en verde oscuro */
+}
+
+/* Estilos para las acciones dentro de los elementos de lista */
+li .actions {
+    display: flex; /* Utiliza flexbox para la disposición de los botones de acción */
+    gap: 10px; /* Espaciado entre los botones de acción */
+}
+
+li .actions button {
+    background-color: #95a5a6; /* Color de fondo del botón de acción */
+    color: #ffffff; /* Color del texto en el botón de acción */
+    border: none; /* Elimina el borde del botón de acción */
+    padding: 5px 10px; /* Espaciado interno del botón de acción */
+    border-radius: 4px; /* Bordes redondeados en el botón de acción */
+    cursor: pointer; /* Cursor tipo puntero para el botón de acción */
+}
+
+li .actions button:hover {
+    background-color: #7f8c8d; /* Color de fondo del botón de acción en hover */
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #444; /* Color de fondo del pie de página */
+    color: white; /* Color del texto en el pie de página */
+    text-align: center; /* Alineación centrada del texto en el pie de página */
+    padding: 10px; /* Espaciado interno del pie de página */
+    bottom: 0; /* Posiciona el pie de página al fondo de la página */
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+/* Estilos específicos para el tema claro */
+body.light-theme {
+    color: #333; /* Color del texto en el modo claro */
+    background-color: #f9f9f9; /* Color de fondo en el modo claro */
+}
+
+/* Estilos para el encabezado en el tema claro */
+body.light-theme header {
+    background-color: #007bff; /* Color de fondo del encabezado en el modo claro */
+}
+
+/* Estilos para el pie de página en el tema claro */
+body.light-theme footer {
+    background-color: #007bff; /* Color de fondo del pie de página en el modo claro */
+}
+
+/* Estilos para botones en el tema claro */
+body.light-theme button.button,
+body.light-theme a.button {
+    background-color: #072d57; /* Color de fondo del botón en el modo claro */
+}
+
+body.light-theme button.button:hover,
+body.light-theme a.button:hover {
+    background-color: #0056b3; /* Color de fondo del botón en hover en el modo claro */
+}
+
+/* Estilos para contenedores en el tema claro */
+body.light-theme .form-container, 
+body.light-theme .list-container {
+    background-color: #fff; /* Fondo blanco para los contenedores en el modo claro */
+    color: #333; /* Color del texto dentro de los contenedores en el modo claro */
+}
+
+/* Estilos para campos de entrada en el tema claro */
+body.light-theme .form-container input, 
+body.light-theme .form-container textarea {
+    border: 1px solid #ddd; /* Borde más claro para los campos de entrada en el modo claro */
+    background-color: #fff; /* Fondo blanco para los campos de entrada en el modo claro */
+    color: #333; /* Color del texto en los campos de entrada en el modo claro */
+}
+
+/* Estilos para listas en el tema claro */
+body.light-theme ul {
+    background-color: #fff; /* Fondo blanco para la lista de tareas en el modo claro */
+}
