@@ -1,0 +1,13 @@
+###############################
+#Es simplemennte un to-do list#
+###############################
+#-----------------------------------------------
+
+# 1) entra al entorno virtual y activialo
+
+# 2) vea  la carpeta raiz del proyecto
+
+# 3)activa el programa asi: python app.py
+
+#-----------------------------------------------
+#o siq uieres puedes instalar todas las librerias y ejecutarlas, estan en el requirements.txt
